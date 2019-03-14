@@ -10,5 +10,9 @@ import org.yash.deltafuse.dataingestion.model.FileData;
 @Service
 public interface FileUploadService {
 
-	public void readExcelFile(InputStream inputStream) throws IOException;
+	public List<FileData> readExcelFile(InputStream inputStream) throws IOException;
+
+	public void saveData(List<FileData> fileData);
+
+	public List<FileData> getItemC();
 }

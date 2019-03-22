@@ -1,5 +1,6 @@
 package org.yash.deltafuse.dataingestion.model;
 
+import java.io.Serializable;
 import java.util.Map;
 import java.util.UUID;
 
@@ -8,7 +9,12 @@ import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
 @Table("MOBILE_DATA")
-public class FileData {
+public class FileData implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	public FileData() {
 		super();
